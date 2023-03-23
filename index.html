@@ -34,21 +34,32 @@
           <option value="Down">Descending</option>
         </select>
       </div>
+
       <!-- List Items -->
       <ul class="mt-10">
+        <!-- li Container -->
         <div
-          class="flex items-center justify-between pb-2 border-b border-gray-400"
+          id="item"
+          class="flex items-center justify-between p-2 border-b border-gray-400"
         >
+          <!-- li Content -->
           <div class="flex gap-4 items-center">
-            <button id="isBought">
-              <i class="fa-regular fa-circle fa-xl"></i>
-            </button>
-            <li class="text-2xl">Hot Dog Buns</li>
+            <input type="checkbox" id="myCheck" />
+            <input
+              type="text"
+              class="text-xl bg-[#F8F2EC] outline-none w-min"
+              value="Hot Dog Buns"
+            />
             <button><i class="fa-solid fa-pen-to-square"></i></button>
             <button><i class="fa-solid fa-trash-can text-red-700"></i></button>
           </div>
           <div class="flex gap-4 items-center">
-            <a class="text-gray-600">Walmart (3.1 miles away)</a>
+            <a
+              href="https://www.google.com/maps/dir//Walmart+Supercenter,+2424+W+Jefferson+St,+Joliet,+IL+60435/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x880e6196bab40237:0x3a7c461a488620a3?sa=X&ved=2ahUKEwiK3tPYvvL9AhXcLUQIHfdABwUQ48ADegQIFxAK"
+              target="_blank"
+              class="text-gray-600"
+              >Walmart (3.1 miles away)</a
+            >
             <a
               ><img src="./assets/img/user-profile.png" alt="" class="h-10"
             /></a>

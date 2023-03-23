@@ -1,5 +1,8 @@
-const checkbox = document.getElementById("isBought");
+const item = document.getElementById("item");
+const checkbox = document.querySelector("input[type=checkbox]");
 
-checkbox.addEventListener("click", () => {
-  checkbox.classList.toggle("fa-circle-check");
+checkbox.addEventListener("change", function () {
+  item.classList.toggle("line-through");
+  item.classList.toggle("text-gray-600");
+  this.checked ? console.log("Bought") : console.log("Unbought");
 });
