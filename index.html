@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./dist/output.css" rel="stylesheet" />
+    <script defer type="module" src="./src/scripts.js"></script>
+  </head>
+  <body class="relative bg-[#F8F2EC]">
+    <!-- Top Menu -->
+    <div class="absolute top-0 right-0 flex items-center gap-8 p-4">
+      <button><i class="fa-solid fa-plus fa-xl"></i></button>
+      <i class="fa-solid fa-message fa-xl"></i>
+      <img src="./assets/img/user-profile.png" alt="" class="h-10" />
+    </div>
+    <!-- Current List Content -->
+    <div class="p-16">
+      <h1 class="font-bold text-4xl">Weekend BBQ</h1>
+      <div class="flex items-center gap-4">
+        <h2 class="text-3xl text-gray-600">Friends</h2>
+        <button><i class="fa-solid fa-user-group fa-lg">+</i></button>
+      </div>
+      <div class="text-right">
+        <p class="inline">Sort by</p>
+        <select id="sort-option" class="p-2 bg-[#F8F2EC] font-bold">
+          <option selected>Manual</option>
+          <option value="Priority">Priority</option>
+          <option value="Store">Store</option>
+          <option value="Distance">Distance</option>
+          <option value="Person">Person</option>
+        </select>
+        <select id="sort-order" class="p-2 bg-[#F8F2EC] font-medium">
+          <option selected>Ascending</option>
+          <option value="Down">Descending</option>
+        </select>
+      </div>
+      <!-- List Items -->
+      <ul class="mt-10">
+        <div
+          class="flex items-center justify-between pb-2 border-b border-gray-400"
+        >
+          <div class="flex gap-4 items-center">
+            <button id="isBought">
+              <i class="fa-regular fa-circle fa-xl"></i>
+            </button>
+            <li class="text-2xl">Hot Dog Buns</li>
+            <button><i class="fa-solid fa-pen-to-square"></i></button>
+            <button><i class="fa-solid fa-trash-can text-red-700"></i></button>
+          </div>
+          <div class="flex gap-4 items-center">
+            <a class="text-gray-600">Walmart (3.1 miles away)</a>
+            <a
+              ><img src="./assets/img/user-profile.png" alt="" class="h-10"
+            /></a>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </body>
+</html>
