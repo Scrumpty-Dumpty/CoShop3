@@ -57,6 +57,7 @@
     background-color: var(--dark-red);
 }
 
+
 .form-container {
     min-height: 100vh;
     background-color: var(--light-bg);
@@ -103,3 +104,4 @@
 .form-container form p a:hover{
     text-decoration: underline;
 }
+
