@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shopping List</title>
+    <style>
+      /* Style for the form */
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin-bottom: 20px;
+      }
+
+      /* Style for the input field */
+      input[type="text"] {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 5px;
+      }
+
+      /* Style for the add button */
+      button.add {
+        padding: 10px;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      /* Style for the remove button */
+      button.remove {
+        padding: 10px;
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Shopping List</h1>
+    <!-- Form to add items to the list -->
+    <form id="addForm">
+      <label for="item">Add an item:</label>
+      <input type="text" id="item" placeholder="Enter item name" required>
+      <button class="add">Add</button>
+    </form>
+    <!-- List of items -->
+    <ul id="list"></ul>
+
+    <script>
+      const form = document.querySelector('#addForm');
+      const list = document.querySelector('#list');
+
+      // Function to add items to the list
+      function addItem(e) {
+        e.preventDefault(); // Prevent form submission
+        const itemInput = document.querySelector('#item');
+        const newItem = document.createElement('li');
+        newItem.textContent = itemInput.value;
+        newItem.innerHTML += '<button class="remove">Remove</button>';
+        list.appendChild(newItem);
+        itemInput.value = ''; // Clear input field
+      }
+
+      // Function to remove items from the list
+      function removeItem(e) {
+        if (e.target.classList.contains('remove')) {
+          const li = e.target.parentElement;
+          list.removeChild(li);
+        }
+      }
+
+      // Add event listeners
+      form.addEventListener('submit', addItem);
+      list.addEventListener('click', removeItem);
+    </script>
+  </body>
+</html>
