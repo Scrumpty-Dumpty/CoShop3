@@ -1,8 +1,11 @@
-const item = document.getElementById("item");
-const checkbox = document.querySelector("input[type=checkbox]");
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    const reader = new FileReader();
 
-checkbox.addEventListener("change", function () {
-  item.classList.toggle("line-through");
-  item.classList.toggle("text-gray-600");
-  this.checked ? console.log("Bought") : console.log("Unbought");
-});
+    reader.onload = function (e) {
+      document.getElementById("blah").setAttribute("src", e.target.result);
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}

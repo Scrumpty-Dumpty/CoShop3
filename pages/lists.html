@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-cream m-0">
+    <!-- Top Menu -->
+    <div class="absolute top-0 right-0 flex items-center gap-8 p-4">
+      <button><i class="fa-solid fa-plus fa-xl"></i></button>
+      <i class="fa-solid fa-message fa-xl"></i>
+      <img src="../assets/img/man-1.png" alt="" class="h-10" />
+    </div>
+
+    <div class="flex">
+      <!-- Sidebar Menu -->
+      <div class="min-h-screen w-[26rem] bg-orange-300 relative">
+        <!-- Logo and Expander -->
+        <div class="flex items-center justify-between p-4">
+          <img src="../assets/logo.svg" alt="logo" class="h-9 w-9" />
+          <i class="fa-solid fa-arrow-left fa-xl"></i>
+        </div>
+        <div class="my-5 flex flex-col gap-10">
+          <!-- Dashboard (Home) -->
+          <div class="bg-cream px-4 py-2 text-right">
+            <a href="../index.html" class="font-medium text-xl">Dashboard</a>
+          </div>
+
+          <!-- User Lists -->
+          <div>
+            <div class="flex items-center justify-between p-4">
+              <h2 class="font-semibold text-xl">My Lists</h2>
+              <i class="fa-solid fa-plus fa-lg"></i>
+            </div>
+            <!-- User List 1 -->
+            <div class="bg-cream text-right px-4 py-2">
+              <h3 class="font-medium text-xl">Personal</h3>
+            </div>
+            <!-- User List 2 -->
+            <div class="bg-cream text-right px-4 py-2 mt-1">
+              <a href="./lists.html" class="font-medium text-xl">Weekend BBQ</a>
+            </div>
+          </div>
+
+          <!-- User Groups -->
+          <div>
+            <div class="flex items-center justify-between p-4">
+              <h2 class="font-semibold text-xl">My Groups</h2>
+              <button onclick="showPopUp()">
+                <i class="fa-solid fa-plus fa-lg"></i>
+              </button>
+            </div>
+            <!-- User Group 1 -->
+            <div class="bg-cream text-right px-4 py-2">
+              <h3 class="font-medium text-xl">Family</h3>
+            </div>
+            <!-- User Group 2 -->
+            <div class="bg-cream text-right px-4 py-2 mt-1">
+              <h3 class="font-medium text-xl">Friends</h3>
+            </div>
+            <!-- User Group 3 -->
+            <div class="bg-cream text-right px-4 py-2 mt-1">
+              <h3 class="font-medium text-xl">Office</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Misc Actions -->
+        <div class="flex flex-col items-center absolute bottom-5 inset-x-0">
+          <div class="flex items-center gap-4">
+            <i class="fa-solid fa-question fa-lg"></i>
+            <p class="font-medium text-lg">FAQ</p>
+          </div>
+          <div class="flex items-center gap-4">
+            <i class="fa-solid fa-headset fa-lg"></i>
+            <p class="font-medium text-lg">Contact Us</p>
+          </div>
+          <div class="flex items-center gap-4">
+            <i class="fa-solid fa-gear fa-lg"></i>
+            <p class="font-medium text-lg">Settings</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Current List Content -->
+      <div class="p-16 w-full">
+        <h1 class="font-bold text-4xl">Weekend BBQ</h1>
+        <div class="flex items-center gap-4">
+          <h2 class="text-3xl text-gray-600">Friends</h2>
+          <button onclick="showPopUp()">
+            <i class="fa-solid fa-user-group fa-lg">+</i>
+          </button>
+        </div>
+        <div class="text-right">
+          <p class="inline">Sort by</p>
+          <select id="sort-option" class="p-2 bg-cream font-bold">
+            <option selected>Manual</option>
+            <option value="Priority">Priority</option>
+            <option value="Store">Store</option>
+            <option value="Distance">Distance</option>
+            <option value="Person">Person</option>
+          </select>
+          <select id="sort-order" class="p-2 bg-cream font-medium">
+            <option selected>Ascending</option>
+            <option value="Down">Descending</option>
+          </select>
+        </div>
+
+        <!-- List Items -->
+        <ul class="mt-5">
+          <!-- li Container -->
+          <div
+            id="item"
+            class="flex items-center justify-between p-2 border-b border-gray-400"
+          >
+            <!-- li Content -->
+            <div class="flex gap-4 items-center">
+              <input type="checkbox" />
+              <input
+                type="text"
+                class="text-xl bg-transparent outline-none max-w-min"
+                value="Hot Dog Buns"
+              />
+              <button
+                onclick="document.getElementById('editWindow').classList.toggle('hidden');"
+              >
+                <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+              <button>
+                <i class="fa-solid fa-trash-can text-red-700"></i>
+              </button>
+            </div>
+            <div class="flex gap-4 items-center">
+              <select id="store" class="p-2 bg-transparent text-gray-600">
+                <option selected>Walmart (3.1 miles away)</option>
+                <option value="">Target (5.7 miles away)</option>
+                <option value="">Whole Foods (5.8 miles away)</option>
+                <option value="">Meijier (7.0 miles away)</option>
+                <option value="">Costco (12 miles away)</option>
+              </select>
+              <img src="../assets/img/man-2.png" alt="" class="h-10" />
+            </div>
+          </div>
+        </ul>
+      </div>
+
+      <div
+        id="editWindow"
+        class="hidden rounded-xl absolute h-96 w-4/12 bg-orange-300 inset-0 m-auto"
+      >
+        <div class="relative rounded-t-xl w-full h-40 bg-orange-400/50">
+          <img
+            id="blah"
+            src="https://via.placeholder.com/130x160"
+            class="absolute -bottom-20 left-8 object-cover rounded-lg w-[130px] h-[160px]"
+          />
+        </div>
+        <button
+          class="absolute top-0 right-0 p-4"
+          onclick="document.getElementById('editWindow').classList.toggle('hidden')"
+        >
+          <i class="fa-solid fa-x"></i>
+        </button>
+        <div class="p-5 mt-16">
+          <div class="flex items-center gap-4">
+            <h1 class="text-2xl font-bold">Hot Dog Buns</h1>
+            <button><i class="fa-solid fa-trash-can text-red-700"></i></button>
+          </div>
+          <p>Quantity: 1</p>
+          <p>Added by: <span class="font-bold">Rick</span></p>
+          <form>
+            <label for="file-input">
+              Add a picture
+              <i class="fa-solid fa-camera"></i>
+            </label>
+
+            <input
+              id="file-input"
+              type="file"
+              accept="image/*"
+              onchange="readURL(this);"
+              class="hidden"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="../src/scripts.js"></script>
+    <script src="../index.js"></script>
+  </body>
+</html>

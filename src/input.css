@@ -10,3 +10,7 @@
   /* outline: 1px solid red !important; */
   /* background: rgb(0 100 0 /0.1) !important; */
 }
+
+input:checked + * {
+  text-decoration: line-through;
+}
