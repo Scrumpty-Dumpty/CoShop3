@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
     if (mysqli_num_rows($select) > 0) {
         $row = mysqli_fetch_assoc($select);
         $_SESSION['user_id'] = $row['id'];
-        header('location:home.html');
+        header('location:index.html');
     } else {
         $message[] = 'Incorrect email or password!';
     }
@@ -45,7 +45,7 @@ if (isset($_POST['submit'])) {
             <input type="password" name="password" placeholder="Enter your password" class="box"
                 required>
             <input type="submit" name="submit" value="Login now" class="btn">
-            <p>Don't have an account?<a href="register.php">Register here</a></p>
+            <p>Don't have an account? <a href="register.php">Register here</a></p>
         </form>
     </div>
 </body>
