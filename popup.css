@@ -47,13 +47,13 @@
     transition: all 300ms ease-in-out;
     transform:translate(-50%, -50%) scale(1);
 }
-form {
+.messageForm  {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
-textarea {
+.messageForm textarea {
     margin:auto;
     width:250px;
     height:100px;
@@ -61,14 +61,14 @@ textarea {
     justify-content: center;
     
 }
-select {
+.messageForm select {
     width:250px;
     height:100px;
     text-align: center;
     justify-content: center;
     
 }
-input {
+.messageForm input {
     width:250px;
     height:100px;
     text-align: center;
