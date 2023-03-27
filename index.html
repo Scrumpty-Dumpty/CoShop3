@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./dist/output.css" rel="stylesheet" />
+    <link rel = "stylesheet" href="popup.css" >
   </head>
   <body class="bg-cream m-0">
     <!-- Top Menu -->
@@ -12,7 +13,23 @@
       <i class="fa-solid fa-message fa-xl"></i>
       <img src="./assets/img/man-1.png" alt="" class="h-10" />
     </div>
-
+    <!-- Create List Popup Window-->
+    <div class="popup" id="popup-2">
+      <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="showPopUp2()">&times;</div>
+          <h2>Create A List</h2>
+        </div>
+    </div>
+        
+    <!-- Create Group Popup Window-->
+    <div class="popup" id="popup-1">
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="close-btn" onclick="showPopUp1()">&times;</div>
+        <h2>Create A Group</h2>
+      </div>
+    </div>    
     <div class="flex">
       <!-- Sidebar Menu -->
       <div class="min-h-screen w-[26rem] bg-orange-300 relative">
@@ -31,7 +48,9 @@
           <div>
             <div class="flex items-center justify-between p-4">
               <h2 class="font-semibold text-xl">My Lists</h2>
-              <i class="fa-solid fa-plus fa-lg"></i>
+              <button onclick="showPopUp2()">
+                <i class="fa-solid fa-plus fa-lg"></i>
+              </button>
             </div>
             <!-- User List 1 -->
             <div class="bg-cream text-right px-4 py-2">
@@ -49,7 +68,7 @@
           <div>
             <div class="flex items-center justify-between p-4">
               <h2 class="font-semibold text-xl">My Groups</h2>
-              <button onclick="showPopUp()">
+              <button onclick="showPopUp1()">
                 <i class="fa-solid fa-plus fa-lg"></i>
               </button>
             </div>
