@@ -1,6 +1,9 @@
-function showPopUp1(){
-    document.getElementById("popup-1").classList.toggle("active");
+function showPopUpGroup(){
+    document.getElementById("group-popup").classList.toggle("active");
 }
-function showPopUp2(){
-    document.getElementById("popup-2").classList.toggle("active");
+function showPopUpList(){
+    document.getElementById("list-popup").classList.toggle("active");
+}
+function showPopUpMessage(){
+    document.getElementById("message-popup").classList.toggle("active");
 }

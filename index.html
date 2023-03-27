@@ -10,23 +10,46 @@
     <!-- Top Menu -->
     <div class="absolute top-0 right-0 flex items-center gap-8 p-4">
       <button><i class="fa-solid fa-plus fa-xl"></i></button>
-      <i class="fa-solid fa-message fa-xl"></i>
+      <button onclick="showPopUpMessage()">
+        <i class="fa-solid fa-message fa-xl"></i>
+      </button>
       <img src="./assets/img/man-1.png" alt="" class="h-10" />
     </div>
-    <!-- Create List Popup Window-->
-    <div class="popup" id="popup-2">
+    <!-- Send Message Popup Window-->
+    <div class="popup" id="message-popup">
       <div class="overlay"></div>
         <div class="content">
-          <div class="close-btn" onclick="showPopUp2()">&times;</div>
+          <div class="close-btn" onclick="showPopUpMessage()">&times;</div>
+          <h2>Send a message</h2>
+          <p>
+            <form>
+              <input type="text" name="Name" placeholder="Your Name" required>
+              <select name="Who do you want to contact">
+                <option>Dave</option>
+                <option>Paul</option>
+                <option>Taylor</option>
+                <option>Sydney</option>
+                <option>Kyle</option>
+              </select>
+              <textarea id="message" name="Message" placeholder="Message" required></textarea>
+              <button class="submit" type="submit">Send Message</button>
+            </form>
+          </p>
+        </div>
+    </div>         
+    <!-- Create List Popup Window-->
+    <div class="popup" id="list-popup">
+      <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="showPopUpList()">&times;</div>
           <h2>Create A List</h2>
         </div>
-    </div>
-        
+    </div>        
     <!-- Create Group Popup Window-->
-    <div class="popup" id="popup-1">
+    <div class="popup" id="group-popup">
       <div class="overlay"></div>
       <div class="content">
-        <div class="close-btn" onclick="showPopUp1()">&times;</div>
+        <div class="close-btn" onclick="showPopUpGroup()">&times;</div>
         <h2>Create A Group</h2>
       </div>
     </div>    
@@ -48,7 +71,7 @@
           <div>
             <div class="flex items-center justify-between p-4">
               <h2 class="font-semibold text-xl">My Lists</h2>
-              <button onclick="showPopUp2()">
+              <button onclick="showPopUpList()">
                 <i class="fa-solid fa-plus fa-lg"></i>
               </button>
             </div>
@@ -68,7 +91,7 @@
           <div>
             <div class="flex items-center justify-between p-4">
               <h2 class="font-semibold text-xl">My Groups</h2>
-              <button onclick="showPopUp1()">
+              <button onclick="showPopUpGroup()">
                 <i class="fa-solid fa-plus fa-lg"></i>
               </button>
             </div>
