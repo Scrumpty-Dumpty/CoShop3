@@ -20,7 +20,7 @@ class Sidenav extends HTMLElement {
             </div>
             <!-- Messages -->
             <div class="bg-cream text-right px-4 py-2 mt-1">
-              <a href="./messages.html" class="font-medium text-xl">Messages</a>
+              <a href="" class="cursor-not-allowed font-medium text-xl">Messages</a>
             </div>
           </div>
           
