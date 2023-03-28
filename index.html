@@ -3,139 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./dist/output.css" rel="stylesheet" />
-    <link rel = "stylesheet" href="popup.css" >
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="./assets/styles/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/styles/popup.css" />
+    <script src="./components/sidenav.js" type="text/javascript" defer></script>
+    <script src="./components/topnav.js" type="text/javascript" defer></script>
   </head>
-  <body class="bg-cream m-0">
-    <!-- Top Menu -->
-    <div class="absolute top-0 right-0 flex items-center gap-8 p-4">
-      <button><i class="fa-solid fa-plus fa-xl"></i></button>
-      <button onclick="showPopUpMessage()">
-        <i class="fa-solid fa-message fa-xl"></i>
-      </button>
-      <img src="./assets/img/man-1.png" alt="" class="h-10" />
-    </div>
-    <!-- Send Message Popup Window-->
-    <div class="popup" id="message-popup">
-      <div class="overlay"></div>
-        <div class="content">
-          <div class="close-btn" onclick="showPopUpMessage()">&times;</div>
-          <h2>Send a message</h2>
-          <p>
-            <form class="messageForm">
-              <input type="text" name="Name" placeholder="Your Name" required>
-              <select name="Who do you want to contact">
-                <option>Dave</option>
-                <option>Paul</option>
-                <option>Taylor</option>
-                <option>Sydney</option>
-                <option>Kyle</option>
-              </select>
-              <textarea id="message" name="Message" placeholder="Message" required></textarea>
-              <button class="submit" type="submit">Send Message</button>
-            </form>
-          </p>
-        </div>
-    </div>         
-    <!-- Create List Popup Window-->
+  <body class="m-0 bg-cream">
+    <topnav-component></topnav-component>
+
+    <!-- Create List Popup Window -->
     <div class="popup" id="list-popup">
       <div class="overlay"></div>
-        <div class="content">
-          <div class="close-btn" onclick="showPopUpList()">&times;</div>
-          <h2>Create A List</h2>
-        </div>
-    </div>        
-    <!-- Create Group Popup Window-->
+      <div class="content">
+        <div class="close-btn" onclick="showPopUpList()">&times;</div>
+        <h2>Create A List</h2>
+      </div>
+    </div>
+
+    <!-- Create Group Popup Window -->
     <div class="popup" id="group-popup">
       <div class="overlay"></div>
       <div class="content">
         <div class="close-btn" onclick="showPopUpGroup()">&times;</div>
         <h2>Create A Group</h2>
       </div>
-    </div>    
+    </div>
+
     <div class="flex">
-      <!-- Sidebar Menu -->
-      <div class="min-h-screen w-[26rem] bg-orange-300 relative">
-        <!-- Logo and Expander -->
-        <div class="flex items-center justify-between p-4">
-          <img src="./assets/logo.svg" alt="logo" class="h-9 w-9" />
-          <i class="fa-solid fa-arrow-left fa-xl"></i>
-        </div>
-        <div class="my-5 flex flex-col gap-10">
-          <!-- Dashboard (Home) -->
-          <div class="bg-cream px-4 py-2 text-right">
-            <a href="./index.html" class="font-medium text-xl">Dashboard</a>
-          </div>
-
-          <!-- User Lists -->
-          <div>
-            <div class="flex items-center justify-between p-4">
-              <h2 class="font-semibold text-xl">My Lists</h2>
-              <button onclick="showPopUpList()">
-                <i class="fa-solid fa-plus fa-lg"></i>
-              </button>
-            </div>
-            <!-- User List 1 -->
-            <div class="bg-cream text-right px-4 py-2">
-              <h3 class="font-medium text-xl">Personal</h3>
-            </div>
-            <!-- User List 2 -->
-            <div class="bg-cream text-right px-4 py-2 mt-1">
-              <a href="./pages/lists.html" class="font-medium text-xl"
-                >Weekend BBQ</a
-              >
-            </div>
-          </div>
-
-          <!-- User Groups -->
-          <div>
-            <div class="flex items-center justify-between p-4">
-              <h2 class="font-semibold text-xl">My Groups</h2>
-              <button onclick="showPopUpGroup()">
-                <i class="fa-solid fa-plus fa-lg"></i>
-              </button>
-            </div>
-            <!-- User Group 1 -->
-            <div class="bg-cream text-right px-4 py-2">
-              <h3 class="font-medium text-xl">Family</h3>
-            </div>
-            <!-- User Group 2 -->
-            <div class="bg-cream text-right px-4 py-2 mt-1">
-              <h3 class="font-medium text-xl">Friends</h3>
-            </div>
-            <!-- User Group 3 -->
-            <div class="bg-cream text-right px-4 py-2 mt-1">
-              <h3 class="font-medium text-xl">Office</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Misc Actions -->
-        <div class="flex flex-col items-center absolute bottom-5 inset-x-0">
-          <div class="flex items-center gap-4">
-            <i class="fa-solid fa-question fa-lg"></i>
-            <p class="font-medium text-lg">FAQ</p>
-          </div>
-          <div class="flex items-center gap-4">
-            <i class="fa-solid fa-headset fa-lg"></i>
-            <p class="font-medium text-lg">Contact Us</p>
-          </div>
-          <div class="flex items-center gap-4">
-            <i class="fa-solid fa-gear fa-lg"></i>
-            <p class="font-medium text-lg">Settings</p>
-          </div>
-        </div>
-      </div>
-
-      <main class="p-10 w-full">
+      <sidenav-component></sidenav-component>
+      <main class="w-full p-10">
         <div>
-          <h1 class="font-bold text-4xl mt-10">Welcome back, John</h1>
+          <h1 class="mt-10 text-4xl font-bold">Welcome back, John</h1>
           <div>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2983.3561273885553!2d-88.08181458463017!3d41.
                 604810079244764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e5de7e212468d%3A0x209b430a53abcc7c!2sLewi
                 s%20University!5e0!3m2!1sen!2sus!4v1679679173109!5m2!1sen!2sus"
-              class="mt-10 w-full h-96 border-none"
+              class="mt-10 h-96 w-full border-none"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
@@ -144,7 +49,7 @@
         </div>
       </main>
     </div>
-    <script src="./src/scripts.js"></script>
-    <script src="index.js"></script>
+    <script src="./assets/scripts/scripts.js"></script>
+    <script src="./assets/scripts/index.js"></script>
   </body>
 </html>

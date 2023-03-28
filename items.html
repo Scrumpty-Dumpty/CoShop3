@@ -58,7 +58,7 @@
     <!-- Form to add items to the list -->
     <form id="addForm">
       <label for="item">Add an item:</label>
-      <input type="text" id="item" placeholder="Enter item name" required>
+      <input type="text" id="item" placeholder="Enter item name" required />
       <button class="add">Add</button>
     </form>
     <!-- List of items -->
@@ -68,17 +68,17 @@
     <button class="delete">Delete List</button>
 
     <script>
-      const form = document.querySelector('#addForm');
-      const list = document.querySelector('#list');
-      const deleteListBtn = document.querySelector('.delete');
+      const form = document.querySelector("#addForm");
+      const list = document.querySelector("#list");
+      const deleteListBtn = document.querySelector(".delete");
 
-      document.addEventListener('DOMContentLoaded', getItems) 
+      document.addEventListener("DOMContentLoaded", getItems);
 
       // Function to add items to the list
       function addItem(e) {
         e.preventDefault(); // Prevent form submission
-        const itemInput = document.querySelector('#item');
-        const newItem = document.createElement('li');
+        const itemInput = document.querySelector("#item");
+        const newItem = document.createElement("li");
         newItem.textContent = itemInput.value;
         newItem.innerHTML += '<button class="remove">Remove</button>';
         list.appendChild(newItem);
@@ -86,70 +86,70 @@
         // storing item in Local Storage
         storeItemInLocalStorage(itemInput.value);
 
-        itemInput.value = ''; // Clear input field
+        itemInput.value = ""; // Clear input field
       }
 
       // Function to remove items from the list
       function removeItem(e) {
-         if (e.target.classList.contains('remove')) {
-           const li = e.target.parentElement;
-           list.removeChild(li);
-         }
+        if (e.target.classList.contains("remove")) {
+          const li = e.target.parentElement;
+          list.removeChild(li);
+        }
       }
 
       // Function to get items from LS
       function getItems() {
         let items;
-        if(localStorage.getItem('items') === null) {
+        if (localStorage.getItem("items") === null) {
           items = [];
         } else {
-          items = JSON.parse(localStorage.getItem('items'));
+          items = JSON.parse(localStorage.getItem("items"));
         }
 
-        items.forEach(function(item) {
-          const newItem = document.createElement('li');
-          newItem.appendChild(document.createTextNode(item))
+        items.forEach(function (item) {
+          const newItem = document.createElement("li");
+          newItem.appendChild(document.createTextNode(item));
 
           newItem.innerHTML += '<button class="remove">Remove</button>';
           list.appendChild(newItem);
-        })
+        });
       }
 
       // Function to store items in Local Storage
       function storeItemInLocalStorage(item) {
         let items;
-        if(localStorage.getItem('items') === null) {
+        if (localStorage.getItem("items") === null) {
           items = [];
         } else {
-          items = JSON.parse(localStorage.getItem('items'));
+          items = JSON.parse(localStorage.getItem("items"));
         }
 
         items.push(item);
 
-        localStorage.setItem('items', JSON.stringify(items))
+        localStorage.setItem("items", JSON.stringify(items));
       }
 
       // Function to remove from LS
       function removeFromLocalStorage(item) {
         let items;
-        if(localStorage.getItem('items') === null) {
+        if (localStorage.getItem("items") === null) {
           items = [];
         } else {
-          items = JSON.parse(localStorage.getItem('items'));
+          items = JSON.parse(localStorage.getItem("items"));
         }
 
-        items.forEach(function(itemN, i) {
-          if(item.textContent === itemN) {
+        items.forEach(function (itemN, i) {
+          if (item.textContent === itemN) {
             items.splice(i, 1);
           }
-        })
+        });
 
-        localStorage.setItem('items', JSON.stringify(items));
+        localStorage.setItem("items", JSON.stringify(items));
       }
 
       // function to clear items from list
       function clearItems() {
-        list.innerHTML = '';
+        list.innerHTML = "";
 
         clearFromLocalStorage();
       }
@@ -160,9 +160,9 @@
       }
 
       // Add event listeners
-      form.addEventListener('submit', addItem);
-      list.addEventListener('click', removeItem);
-      deleteListBtn.addEventListener('click', clearItems);
+      form.addEventListener("submit", addItem);
+      list.addEventListener("click", removeItem);
+      deleteListBtn.addEventListener("click", clearItems);
     </script>
   </body>
 </html>
