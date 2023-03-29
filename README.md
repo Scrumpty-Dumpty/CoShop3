@@ -1,4 +1,4 @@
-# Final-Project
+# CoShop
 
 A unique shared shopping list web app
 
