@@ -6,7 +6,7 @@ class Sidenav extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
     <!-- Sidebar Menu -->
-      <div class="min-h-screen w-80 bg-orange-300 relative">
+      <div id="sidenav" class="min-h-screen w-80 relative" style="background-color: #F2BB7F;">
         <!-- Logo and Expander -->
         <div class="flex items-center justify-between p-4">
           <img src="./assets/logo.svg" alt="logo" class="h-9 w-9" />
@@ -20,7 +20,7 @@ class Sidenav extends HTMLElement {
             </div>
             <!-- Messages -->
             <div class="bg-cream text-right px-4 py-2 mt-1">
-              <a href="" class="cursor-not-allowed font-medium text-xl">Messages</a>
+              <a class="cursor-not-allowed font-medium text-xl">Messages</a>
             </div>
           </div>
           
@@ -79,6 +79,10 @@ class Sidenav extends HTMLElement {
             <i class="fa-solid fa-gear fa-lg"></i>
             <p class="font-medium text-lg">Settings</p>
           </div>
+          <div class="flex items-center gap-4">
+            <i class="fa-solid fa-droplet fa-lg"></i>
+            <input type="color" id="colorpicker" value="#F2BB7F"> <!-- default color -->
+          </div>
         </div>
       </div>
     `;
@@ -86,3 +90,11 @@ class Sidenav extends HTMLElement {
 }
 
 customElements.define("sidenav-component", Sidenav);
+
+let sidenav = document.getElementById("sidenav");
+let colorPicker = document.getElementById("colorpicker");
+
+colorPicker.addEventListener("input", () => {
+  sidenav.style.backgroundColor =
+    colorPicker.value; /* TODO: store value so that ot doesn't go back when changing pages */
+});
