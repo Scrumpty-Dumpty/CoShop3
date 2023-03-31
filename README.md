@@ -1,4 +1,8 @@
-# Shared Shopping List Web App
+# <<<<<<< HEAD
+
+# CoShop
+
+> > > > > > > f4bbbf62349fdcdddbb638dd42eeb2463b777566
 
 Project: Final Project
 A unique shared shopping list web app
