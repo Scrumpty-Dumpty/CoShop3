@@ -19,17 +19,19 @@ if (isset($_POST['submit'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Login</title>
-</head>
+    <link rel="icon" href="./assets/logo.svg" type="image/svg+xml" />
+    <link href="./assets/styles/output.css" rel="stylesheet" />
+    <!-- remember that I removed amna's styling file path -->
+  </head>
 
-<body>
+  <body>
+  <main>
     <div class="form-container">
         <form action="" method="post" enctype="multipart/form-data">
             <h3>Login Here</h3>
@@ -45,9 +47,9 @@ if (isset($_POST['submit'])) {
             <input type="password" name="password" placeholder="Enter your password" class="box"
                 required>
             <input type="submit" name="submit" value="Login now" class="btn">
-            <p>Don't have an account? <a href="register.php">Register here</a></p>
+            <p>Don't have an account? <a href="./register.php">Register here</a></p>
         </form>
-    </div>
-</body>
-
+      </div>
+    </main>
+  </body>
 </html>
