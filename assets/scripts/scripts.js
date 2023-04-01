@@ -3,9 +3,13 @@ function readURL(input) {
     const reader = new FileReader();
 
     reader.onload = function (e) {
-      document.getElementById("blah").setAttribute("src", e.target.result);
+      document
+        .getElementById("pic-preview")
+        .setAttribute("src", e.target.result);
     };
 
     reader.readAsDataURL(input.files[0]);
   }
 }
+
+AOS.init();
