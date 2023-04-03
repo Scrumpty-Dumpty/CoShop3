@@ -75,8 +75,8 @@ if (isset($_POST['submit'])) {
           <button
             type="submit"
             class="mt-2 bg-blue-400 py-2 font-bold text-white hover:bg-blue-500"
-          >
-            Login
+          >            
+          <a href="./index.html">Login</a> 
           </button>
           <div class="flex w-full items-center justify-between">
             <p><input type="checkbox" class="mr-1" /> Remember Me</p>
