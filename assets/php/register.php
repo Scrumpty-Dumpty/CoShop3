@@ -44,13 +44,13 @@ if(isset($_POST['submit'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>CoShop | Register</title>
-    <link rel="icon" href="./assets/logo.svg" type="image/svg+xml" />
-    <link href="./assets/styles/output.css" rel="stylesheet" />
+    <link rel="icon" href="../assets/logo.svg" type="image/svg+xml" />
+    <link href="../assets/styles/output.css" rel="stylesheet" />
   </head>
   <body>
     <div class="absolute top-4 left-4">
       <div class="flex items-center">
-        <img src="./assets/logo.svg" alt="logo" class="h-10" />
+        <img src="../assets/logo.svg" alt="logo" class="h-10" />
         <p class="text-lg">
           <span class="font-bold">Co</span><span>Shop</span>
         </p>
@@ -78,7 +78,7 @@ if(isset($_POST['submit'])){
 
           <img
             id="pic-preview"
-            src="./assets/img/blank-profile.jpg"
+            src="../assets/img/blank-profile.jpg"
             class="mx-auto aspect-square w-36 rounded-full object-cover"
           />
           <input
@@ -156,14 +156,14 @@ if(isset($_POST['submit'])){
         >
           <div class="h-5/6 w-5/6 rounded-full bg-yellow-400"></div>
           <img
-            src="./assets/img/app-window.png"
+            src="../assets/img/app-window.png"
             alt=""
             class="absolute h-2/4 rounded-lg"
           />
         </div>
       </div>
     </main>
-    <script src="./assets/scripts/scripts.js" defer></script>
+    <script src="../assets/scripts/scripts.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
 </html>

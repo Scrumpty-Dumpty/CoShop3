@@ -25,13 +25,13 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>CoShop | Login</title>
-    <link rel="icon" href="./assets/logo.svg" type="image/svg+xml" />
-    <link href="./assets/styles/output.css" rel="stylesheet" />
+    <link rel="icon" href="../assets/logo.svg" type="image/svg+xml" />
+    <link href="../assets/styles/output.css" rel="stylesheet" />
   </head>
   <body>
     <div class="absolute top-4 left-4">
       <div class="flex items-center">
-        <img src="./assets/logo.svg" alt="logo" class="h-10" />
+        <img src="../assets/logo.svg" alt="logo" class="h-10" />
         <p class="text-lg">
           <span class="font-bold">Co</span><span>Shop</span>
         </p>
@@ -76,7 +76,7 @@ if (isset($_POST['submit'])) {
             type="submit"
             class="mt-2 bg-blue-400 py-2 font-bold text-white hover:bg-blue-500"
           >            
-          <a href="./index.html">Login</a> 
+          <a href="../index.html">Login</a> 
           </button>
           <div class="flex w-full items-center justify-between">
             <p><input type="checkbox" class="mr-1" /> Remember Me</p>
@@ -84,7 +84,7 @@ if (isset($_POST['submit'])) {
           </div>
           <p class="mt-1">
             Don't have an account?
-            <a href="./register.php" class="font-bold">Sign up for free</a>
+            <a href="../register.php" class="font-bold">Sign up for free</a>
           </p>
         </form>
       </div>
@@ -97,14 +97,14 @@ if (isset($_POST['submit'])) {
         >
           <div class="h-5/6 w-5/6 rounded-full bg-blue-400"></div>
           <img
-            src="./assets/img/app-window.png"
+            src="../assets/img/app-window.png"
             alt=""
             class="absolute h-2/4 rounded-lg shadow-lg"
           />
         </div>
       </div>
     </main>
-    <script src="./assets/scripts/scripts.js" defer></script>
+    <script src="../assets/scripts/scripts.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
 </html>
