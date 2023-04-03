@@ -158,7 +158,7 @@ if(isset($_POST['submit'])){
           <img
             src="./assets/img/app-window.png"
             alt=""
-            class="absolute h-2/4 rounded-lg"
+            class="absolute h-2/4 rounded-lg shadow-lg"
           />
         </div>
       </div>
