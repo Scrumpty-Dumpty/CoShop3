@@ -142,7 +142,7 @@ if(isset($_POST['submit'])){
           <a href="" class="text-right text-sm font-bold">Privacy Policy</a>
           <p class="mt-1">
             Already a member?
-            <a href="./login.html" class="font-bold">Login here</a>
+            <a href="./login.php" class="font-bold">Login here</a>
           </p>
         </form>
       </div>
