@@ -70,35 +70,32 @@ if(isset($_POST['submit'])){
           <p class="text-lg">Get started for free!</p>
           <?php
             if(isset($message)){
-                foreach($message as $message){
-                    echo '<div class = "message">'.$message.'</div>';
-                }
+              foreach($message as $message){
+                echo '<div class = "message">'.$message.'</div>';
+              }
             }
-            ?>
+          ?>
 
-          <img
+          <div
             id="pic-preview"
-            src="./assets/img/blank-profile.jpg"
-            class="mx-auto aspect-square w-36 rounded-full object-cover"
-          />
-          <input
-            id="profile-picture"
-            type="file"
-            accept="image/jpg, image/jpeg, image/png"
-            onchange="readURL(this);"
-            class="hidden"
-          />
-          <label
-            for="profile-picture"
-            class="flex items-center justify-center gap-2 text-sm"
+            class="mx-auto flex aspect-square w-36 items-center justify-center rounded-full bg-cover bg-center transition-all duration-300 hover:bg-black/50 hover:bg-blend-overlay"
+            style="background-image: url('./assets/img/blank-profile.jpg')"
           >
-            <i
-              class="fa-solid fa-camera text-lg text-gray-500 hover:text-gray-600"
-            ></i>
-            <span class="text-gray-500 hover:text-gray-600"
-              >Upload a profile picture</span
-            >
-          </label>
+            <input
+              id="profile-picture"
+              type="file"
+              accept="image/jpg, image/jpeg, image/png"
+              onchange="readURLPP(this);"
+              class="hidden"
+            />
+            <label
+              for="profile-picture"
+              class="flex items-center justify-center gap-2 text-sm"
+              ><i
+                class="fa-solid fa-camera p-9 text-xl text-white opacity-0 hover:opacity-100"
+              ></i>
+            </label>
+          </div>
 
           <input
             class="border-b border-gray-200 py-2 pl-2"
