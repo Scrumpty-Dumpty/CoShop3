@@ -26,5 +26,3 @@ function readURLPP(input) {
     reader.readAsDataURL(input.files[0]);
   }
 }
-
-AOS.init();
