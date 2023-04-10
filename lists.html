@@ -34,68 +34,66 @@
 
     <div class="flex">
       <sidenav-component></sidenav-component>
-      <main class="w-full">
+      <main class="w-full p-12">
         <!-- Current List Content -->
-        <div class="p-16">
-          <h1 class="text-4xl font-bold">Weekend BBQ</h1>
-          <div class="flex items-center gap-4">
-            <h2 class="text-3xl text-gray-600">Friends</h2>
-            <button onclick="showPopUp()">
-              <i class="fa-solid fa-user-group fa-lg">+</i>
-            </button>
-          </div>
-          <div class="text-right">
-            <p class="inline">Sort by</p>
-            <select id="sort-option" class="bg-cream p-2 font-bold">
-              <option selected>Manual</option>
-              <option value="Priority">Priority</option>
-              <option value="Store">Store</option>
-              <option value="Distance">Distance</option>
-              <option value="Person">Person</option>
-            </select>
-            <select id="sort-order" class="bg-cream p-2 font-medium">
-              <option selected>Ascending</option>
-              <option value="Down">Descending</option>
-            </select>
-          </div>
-
-          <!-- List Items -->
-          <ul class="mt-5">
-            <!-- li Container -->
-            <div
-              id="item"
-              class="flex items-center justify-between border-b border-gray-400 p-2"
-            >
-              <!-- li Content -->
-              <div class="flex items-center gap-4">
-                <input type="checkbox" />
-                <input
-                  type="text"
-                  class="max-w-min bg-transparent text-xl outline-none"
-                  value="Hot Dog Buns"
-                />
-                <button
-                  onclick="document.getElementById('editWindow').classList.toggle('hidden');"
-                >
-                  <i class="fa-solid fa-pen-to-square"></i>
-                </button>
-                <button>
-                  <i class="fa-solid fa-trash-can text-red-700"></i>
-                </button>
-              </div>
-              <div class="flex items-center gap-4">
-                <select id="store" class="bg-transparent p-2 text-gray-600">
-                  <option selected>Walmart (3.1 miles away)</option>
-                  <option value="">Target (5.7 miles away)</option>
-                  <option value="">Whole Foods (5.8 miles away)</option>
-                  <option value="">Meijier (7.0 miles away)</option>
-                  <option value="">Costco (12 miles away)</option>
-                </select>
-                <img src="./assets/img/man-2.png" alt="" class="h-10" />
-              </div>
-            </div>
-          </ul>
+        <h1 class="text-4xl font-bold">Weekend BBQ</h1>
+        <div class="flex items-center gap-4">
+          <h2 class="text-3xl text-gray-600">Friends</h2>
+          <button onclick="showPopUp()">
+            <i class="fa-solid fa-user-group fa-lg">+</i>
+          </button>
         </div>
+        <div class="text-right">
+          <p class="inline">Sort by</p>
+          <select id="sort-option" class="bg-cream p-2 font-bold">
+            <option selected>Manual</option>
+            <option value="Priority">Priority</option>
+            <option value="Store">Store</option>
+            <option value="Distance">Distance</option>
+            <option value="Person">Person</option>
+          </select>
+          <select id="sort-order" class="bg-cream p-2 font-medium">
+            <option selected>Ascending</option>
+            <option value="Down">Descending</option>
+          </select>
+        </div>
+
+        <!-- List Items -->
+        <ul class="mt-5">
+          <!-- li Container -->
+          <div
+            id="item"
+            class="flex items-center justify-between border-b border-gray-400 p-2"
+          >
+            <!-- li Content -->
+            <div class="flex items-center gap-4">
+              <input type="checkbox" />
+              <input
+                type="text"
+                class="max-w-min bg-transparent text-xl outline-none"
+                value="Hot Dog Buns"
+              />
+              <button
+                onclick="document.getElementById('editWindow').classList.toggle('hidden');"
+              >
+                <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+              <button>
+                <i class="fa-solid fa-trash-can text-red-700"></i>
+              </button>
+            </div>
+            <div class="flex items-center gap-4">
+              <select id="store" class="bg-transparent p-2 text-gray-600">
+                <option selected>Walmart (3.1 miles away)</option>
+                <option value="">Target (5.7 miles away)</option>
+                <option value="">Whole Foods (5.8 miles away)</option>
+                <option value="">Meijier (7.0 miles away)</option>
+                <option value="">Costco (12 miles away)</option>
+              </select>
+              <img src="./assets/img/man-2.png" alt="" class="h-10" />
+            </div>
+          </div>
+        </ul>
       </main>
       <div
         id="editWindow"
