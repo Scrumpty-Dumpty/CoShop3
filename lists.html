@@ -20,6 +20,11 @@
       <div class="content">
         <div class="close-btn" onclick="showPopUpList()">&times;</div>
         <h2>Create A List</h2>
+        <h2>What would you like to name this list?</h2>
+        <div id="myDIV" class="header">
+          <input type="text" id="listName" placeholder="List Name">
+          <span onclick="createNewList()" class="addBtn">Add</span>
+        </div>
       </div>
     </div>
 
@@ -31,6 +36,19 @@
         <h2>Create A Group</h2>
       </div>
     </div>
+
+        <!-- Create Item Popup Window -->
+        <div class="popup" id="item-popup">
+          <div class="overlay"></div>
+          <div class="content">
+          <div class="close-btn" onclick="showPopUpAddItem()">&times;</div>
+            <h2>What items would you like to add?</h2>
+            <div id="myDIV" class="header">
+              <input type="text" id="myInput" placeholder="Item Name">
+              <span onclick="createNewElement()" class="addBtn">Add</span>
+            </div>
+          </div>
+        </div>
 
     <div class="flex">
       <sidenav-component></sidenav-component>
@@ -57,11 +75,15 @@
               <option selected>Ascending</option>
               <option value="Down">Descending</option>
             </select>
+            <button onclick="showPopUpAddItem()">
+              <i class="fa-solid fa-plus fa-lg"></i>
+            </button>
           </div>
 
           <!-- List Items -->
-          <ul class="mt-5">
+          <ul class="mt-5" id="myUL">
             <!-- li Container -->
+            <li>
             <div
               id="item"
               class="flex items-center justify-between border-b border-gray-400 p-2"
@@ -94,6 +116,7 @@
                 <img src="./assets/img/man-2.png" alt="" class="h-10" />
               </div>
             </div>
+          </li>
           </ul>
         </div>
       </main>
