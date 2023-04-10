@@ -24,7 +24,7 @@ class Sidenav extends HTMLElement {
             <i class="fa-solid fa-list fa-lg p-5"></i>
             <span class="ml-2 font-medium">Lists</span>
           </a>
-          <a href="" class="cursor-not-allowed flex items-center hover:bg-cream rounded-md">
+          <a href="./groups.html" class="flex items-center hover:bg-cream rounded-md">
             <i class="fa-solid fa-user-group fa-lg p-5"></i>
             <span class="ml-2 font-medium">Groups</span>
           </a>
