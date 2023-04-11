@@ -1,20 +1,12 @@
-const getLocation = document.getElementById("getLocation");
+var c = function(pos) {
+    var latitude = pos.coords.latitude;
+    var longitude = pos.coords.longitude;
+    var coords = latitude + "," + longitude;
 
-getLocation.addEventListener("click", evr=>{
-    if("geolocation" in navigator){
-        let watchID = navigator.geolocation.getCurrentPosition(position=>{
-            let latitude = position.coords.latitude;
-            let longitude = position.coords.longitude;
+    document.getElementById("google_map").setAttribute("src", "https://maps.google.co.uk?q="+ coords + "&z=60&output=embed");
+}
 
-            let googleMap = "https://maps.googleapis.com/maps/api/staticmap?center=${latitude},${longitude}&zoom=11&size=400x400";
-            const mapImage = document.getElementById("mapImage");
-            mapImage.src=googleMap;
-
-            console.log(latitude,longitude);
-        },error=>{
-            console.log(error.code);
-        });
-    } else {
-        console.log("Not Supported");
-    }
-});
+document.getElementById("get_location").onclick = function() {
+    navigator.geolocation.getCurrentPosition(c);
+    return false;
+}
