@@ -9,5 +9,24 @@
     "express": "^4.18.2",
     "mongodb": "^5.2.0",
     "mongoose": "^7.0.3"
-  }
+  },
+  "name": "coshop",
+  "description": "Project: Final Project A unique shared shopping list web app",
+  "version": "1.0.0",
+  "main": "connection_constants.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./assets/styles/input.css -o ./assets/styles/output.css --watch",
+    "prod": "tailwindcss -i ./assets/styles/input.css -o ./assets/styles/output.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Scrumpty-Dumpty/CoShop.git"
+  },
+  "keywords": [],
+  "author": "ScrumptyDumpty",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Scrumpty-Dumpty/CoShop/issues"
+  },
+  "homepage": "https://final-project-shopping.azurewebsites.net/"
 }

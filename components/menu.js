@@ -1,4 +1,4 @@
-class Sidenav extends HTMLElement {
+class Menu extends HTMLElement {
   constructor() {
     super();
   }
@@ -6,10 +6,10 @@ class Sidenav extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
     <!-- Sidebar Menu -->
-      <div id="sidenav" class="min-h-screen w-60 transition-all duration-200">
+      <div id="menu" class="min-h-screen w-60 transition-all duration-200">
         <div class="flex items-center justify-center p-4">
           <span class="flex-1 text-xl font-semibold">CoShop</span>
-          <button><i id="btn" class="fa-solid fa-bars-staggered fa-lg"></i></button>
+          <button id="menuBtn" type="button" aria-controls="menu" aria-label="Open navigation" aria-expanded="true"><i class="fa-solid fa-bars-staggered fa-lg"></i></button>
         </div>
         <nav class="p-4 flex flex-col gap-5">
           <a href="./index.html" class="flex items-center hover:bg-cream rounded-md">
@@ -38,33 +38,53 @@ class Sidenav extends HTMLElement {
   }
 }
 
-customElements.define("sidenav-component", Sidenav);
+customElements.define("menu-component", Menu);
 
-let sidenav = document.getElementById("sidenav");
+const menu = document.getElementById("menu");
+const menuBtn = document.getElementById("menuBtn");
+const linkText = document.querySelectorAll("span");
 let colorPicker = document.getElementById("colorpicker");
-const btn = document.getElementById("btn");
-const span = document.querySelectorAll("span");
 
-const shrink = () => {
-  sidenav.classList.toggle("w-[97px]");
-  span.forEach((s) => {
-    s.classList.toggle("hidden");
+// used to expand the menu
+const expand = () => {
+  menuBtn.setAttribute("aria-expanded", "true");
+  menuBtn.setAttribute("aria-label", "Close menu");
+  localStorage.setItem("menu-expanded", "true");
+  menu.classList.replace("w-[97px]", "w-60");
+  linkText.forEach((l) => {
+    l.classList.remove("hidden");
   });
 };
 
-btn.addEventListener("click", () => {
-  shrink();
+// used to shrink the menu
+const shrink = () => {
+  menuBtn.setAttribute("aria-expanded", "false");
+  menuBtn.setAttribute("aria-label", "Open menu");
+  localStorage.setItem("menu-expanded", "false");
+  menu.classList.replace("w-60", "w-[97px]");
+  linkText.forEach((l) => {
+    l.classList.add("hidden");
+  });
+};
+
+// on load fetch and apply menu state
+localStorage.getItem("menu-expanded") == "true" ? expand() : shrink();
+
+// update menu state on change
+menuBtn.addEventListener("click", () => {
+  localStorage.getItem("menu-expanded") == "true" ? shrink() : expand();
 });
 
-// load localstorage on initial load with defaults as backup
-sidenav.style.backgroundColor = localStorage.getItem("navColor") ?? "#F2BB7F";
+// on load fetch and apply menu color
+// if no custom color is set then use defaults
+menu.style.backgroundColor = localStorage.getItem("navColor") ?? "#F2BB7F";
 colorPicker.setAttribute(
   "value",
   localStorage.getItem("navColor") ?? "#F2BB7F"
 );
 
-// save and update on change
+// save and update menu color on change
 colorPicker.addEventListener("input", () => {
   localStorage.setItem("navColor", colorPicker.value);
-  sidenav.style.backgroundColor = localStorage.getItem("navColor");
+  menu.style.backgroundColor = localStorage.getItem("navColor");
 });
