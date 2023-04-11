@@ -8,25 +8,11 @@
     <link rel="icon" href="./assets/logo.svg" type="image/svg+xml" />
     <link href="./assets/styles/output.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/styles/popup.css" />
-    <script src="./components/sidenav.js" type="text/javascript" defer></script>
+    <script src="./components/menu.js" type="text/javascript" defer></script>
     <script src="./components/topnav.js" type="text/javascript" defer></script>
   </head>
   <body class="m-0 bg-cream">
     <topnav-component></topnav-component>
-
-    <!-- Create List Popup Window -->
-    <div class="popup" id="list-popup">
-      <div class="overlay"></div>
-      <div class="content">
-        <div class="close-btn" onclick="showPopUpList()">&times;</div>
-        <h2>Create A List</h2>
-        <h2>What would you like to name this list?</h2>
-        <div id="myDIV" class="header">
-          <input type="text" id="listName" placeholder="List Name">
-          <span onclick="createNewList()" class="addBtn">Add</span>
-        </div>
-      </div>
-    </div>
 
     <!-- Create Group Popup Window -->
     <div class="popup" id="group-popup">
@@ -35,56 +21,31 @@
         <div class="close-btn" onclick="showPopUpGroup()">&times;</div>
         <h2>Create A Group</h2>
         <div id="myDIV" class="header">
-            <input type="text" id="myInput" placeholder="Item Name">
-            <span onclick="createNewGroup()" class="addBtn">Add</span>
+          <input type="text" id="myInput" placeholder="Group Name" />
+          <button onclick="createNewGroup()"  class="text-1xl font-bold">Create New Group</button>
         </div>
       </div>
     </div>
 
-        <!-- Create Item Popup Window -->
-        <div class="popup" id="item-popup">
-          <div class="overlay"></div>
-          <div class="content">
-          <div class="close-btn" onclick="showPopUpAddItem()">&times;</div>
-            <h2>What items would you like to add?</h2>
-            <div id="myDIV" class="header">
-              <input type="text" id="myInput" placeholder="Item Name">
-              <span onclick="createNewElement()" class="addBtn">Add</span>
-            </div>
-          </div>
-        </div>
-
     <div class="flex">
-      <sidenav-component></sidenav-component>
-      <main class="w-full">
+      <menu-component></menu-component>
+      <main class="w-full p-16">
         <!-- Current List Content -->
-        <div class="p-16">
-          <h1 class="text-4xl font-bold">Your Groups</h1>
-          <div class="flex items-center gap-4">
-            <h2 class="text-3xl text-gray-600">Create a Group</h2>
-            <button onclick="showPopUp()">
-              <i class="fa-solid fa-lg" class="close-btn" onclick="showPopUpGroup()">+</i>
-            </button>
-          </div>
-          <div class="text-right">
-            <p class="inline">Sort by</p>
-            <select id="sort-option" class="bg-cream p-2 font-bold">
-              <option selected>Manual</option>
-              <option value="Priority">Priority</option>
-              <option value="Store">Store</option>
-              <option value="Distance">Distance</option>
-              <option value="Person">Person</option>
-            </select>
-            <select id="sort-order" class="bg-cream p-2 font-medium">
-              <option selected>Ascending</option>
-              <option value="Down">Descending</option>
-            </select>
-          </div>
-
-          <!-- List Items -->
-          <ul class="mt-5" id="myUL">
-            <!-- li Container -->
-            <li>
+        <h1 class="text-4xl font-bold">Your Groups</h1>
+        <div class="flex items-center gap-4 text-gray-600">
+          <h2 class="text-3xl">Create a Group</h2>
+          <button onclick="showPopUp()">
+            <i
+              class="fa-solid fa-plus fa-lg"
+              class="close-btn"
+              onclick="showPopUpGroup()"
+            ></i>
+          </button>
+        </div>
+        <!-- List Items -->
+        <ul class="mt-5" id="myUL">
+          <!-- li Container -->
+          <li>
             <div
               id="item"
               class="flex items-center justify-between border-b border-gray-400 p-2"
@@ -110,8 +71,7 @@
               </div>
             </div>
           </li>
-          </ul>
-        </div>
+        </ul>
       </main>
       <div
         id="editWindow"

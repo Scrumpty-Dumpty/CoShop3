@@ -8,7 +8,7 @@
     <link rel="icon" href="./assets/logo.svg" type="image/svg+xml" />
     <link href="./assets/styles/output.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/styles/popup.css" />
-    <script src="./components/sidenav.js" type="text/javascript" defer></script>
+    <script src="./components/menu.js" type="text/javascript" defer></script>
     <script src="./components/topnav.js" type="text/javascript" defer></script>
   </head>
   <body class="m-0 bg-cream">
@@ -22,7 +22,7 @@
         <h2>Create A List</h2>
         <h2>What would you like to name this list?</h2>
         <div id="myDIV" class="header">
-          <input type="text" id="listName" placeholder="List Name">
+          <input type="text" id="listName" placeholder="List Name" />
           <span onclick="createNewList()" class="addBtn">Add</span>
         </div>
       </div>
@@ -37,21 +37,21 @@
       </div>
     </div>
 
-        <!-- Create Item Popup Window -->
-        <div class="popup" id="item-popup">
-          <div class="overlay"></div>
-          <div class="content">
-          <div class="close-btn" onclick="showPopUpAddItem()">&times;</div>
-            <h2>What items would you like to add?</h2>
-            <div id="myDIV" class="header">
-              <input type="text" id="myInput" placeholder="Item Name">
-              <span onclick="createNewElement()" class="addBtn">Add</span>
-            </div>
-          </div>
+    <!-- Create Item Popup Window -->
+    <div class="popup" id="item-popup">
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="close-btn" onclick="showPopUpAddItem()">&times;</div>
+        <h2>What items would you like to add?</h2>
+        <div id="myDIV" class="header">
+          <input type="text" id="myInput" placeholder="Item Name" />
+          <button onclick="createNewElement()" class="addBtn">Add Item</button>
         </div>
+      </div>
+    </div>
 
     <div class="flex">
-      <sidenav-component></sidenav-component>
+      <menu-component></menu-component>
       <main class="w-full">
         <!-- Current List Content -->
         <div class="p-16">
@@ -84,39 +84,39 @@
           <ul class="mt-5" id="myUL">
             <!-- li Container -->
             <li>
-            <div
-              id="item"
-              class="flex items-center justify-between border-b border-gray-400 p-2"
-            >
-              <!-- li Content -->
-              <div class="flex items-center gap-4">
-                <input type="checkbox" />
-                <input
-                  type="text"
-                  class="max-w-min bg-transparent text-xl outline-none"
-                  value="Hot Dog Buns"
-                />
-                <button
-                  onclick="document.getElementById('editWindow').classList.toggle('hidden');"
-                >
-                  <i class="fa-solid fa-pen-to-square"></i>
-                </button>
-                <button>
-                  <i class="fa-solid fa-trash-can text-red-700"></i>
-                </button>
+              <div
+                id="item"
+                class="flex items-center justify-between border-b border-gray-400 p-2"
+              >
+                <!-- li Content -->
+                <div class="flex items-center gap-4">
+                  <input type="checkbox" />
+                  <input
+                    type="text"
+                    class="max-w-min bg-transparent text-xl outline-none"
+                    value="Hot Dog Buns"
+                  />
+                  <button
+                    onclick="document.getElementById('editWindow').classList.toggle('hidden');"
+                  >
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </button>
+                  <button>
+                    <i class="fa-solid fa-trash-can text-red-700"></i>
+                  </button>
+                </div>
+                <div class="flex items-center gap-4">
+                  <select id="store" class="bg-transparent p-2 text-gray-600">
+                    <option selected>Walmart (3.1 miles away)</option>
+                    <option value="">Target (5.7 miles away)</option>
+                    <option value="">Whole Foods (5.8 miles away)</option>
+                    <option value="">Meijier (7.0 miles away)</option>
+                    <option value="">Costco (12 miles away)</option>
+                  </select>
+                  <img src="./assets/img/man-2.png" alt="" class="h-10" />
+                </div>
               </div>
-              <div class="flex items-center gap-4">
-                <select id="store" class="bg-transparent p-2 text-gray-600">
-                  <option selected>Walmart (3.1 miles away)</option>
-                  <option value="">Target (5.7 miles away)</option>
-                  <option value="">Whole Foods (5.8 miles away)</option>
-                  <option value="">Meijier (7.0 miles away)</option>
-                  <option value="">Costco (12 miles away)</option>
-                </select>
-                <img src="./assets/img/man-2.png" alt="" class="h-10" />
-              </div>
-            </div>
-          </li>
+            </li>
           </ul>
         </div>
       </main>

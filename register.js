@@ -1,3 +1,5 @@
+// NOTE: THIS CODE HAS NOT BEEN TESTED YET
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -6,21 +8,8 @@ const path = require('path');
 const app = express();
 
 
-// Connect to the MongoDB database
-mongoose.connect('mongodb+srv://CoShopUser:6TvlGsCx9PGmwpNl@coshopcluster.iyjalfb.mongodb.net/?retryWrites=true&w=majority', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
 
-// Define a schema for the user collection
-const userSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  password: String
-});
-
-// Create a model based on the schema
-const User = mongoose.model('User', userSchema);
+<script src="connections_constants.js"></script>
 
 // Set up middleware to parse incoming request bodies as JSON
 app.use(bodyParser.json());
