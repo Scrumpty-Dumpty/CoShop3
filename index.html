@@ -37,15 +37,35 @@
       <main class="w-full p-12">
         <div>
           <h1 class="text-4xl font-bold">Dashboard</h1>
-          <div>
-            </br><button name="get_location" type="submit" class="button" id="get_location">View Current Location</button>
-          </div>
-            <div id="map">
-              <iframe id="google_map"
-              src="https://maps.google.co.uk?output=embed"
-              class="mt-10 h-96 w-full border-none"></iframe>
+          <div class="my-4 flex items-center justify-between">
+            <button
+              name="get_location"
+              type="submit"
+              class="rounded-sm bg-orange-300 px-2 py-1 text-sm hover:bg-orange-400"
+              id="get_location"
+            >
+              <i class="fa-solid fa-location-dot"></i>
+              View Current Location
+            </button>
+            <div
+              class="flex items-center gap-2 rounded-sm border-b border-black py-1 font-medium"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input
+                type="text"
+                placeholder="Search location..."
+                class="bg-transparent"
+              />
             </div>
-            <script src="./script.js"></script>
+          </div>
+          <div id="map">
+            <iframe
+              id="google_map"
+              src="https://maps.google.co.uk?output=embed"
+              class="h-96 w-full border-none"
+            ></iframe>
+          </div>
+          <script src="./script.js"></script>
         </div>
       </main>
     </div>
