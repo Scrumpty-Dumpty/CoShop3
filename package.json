@@ -15,8 +15,8 @@
   "version": "1.0.0",
   "main": "connection_constants.js",
   "scripts": {
-    "dev": "tailwindcss -i ./assets/styles/input.css -o ./assets/styles/output.css --watch",
-    "prod": "tailwindcss -i ./assets/styles/input.css -o ./assets/styles/output.css --minify"
+    "dev": "tailwindcss -i ./src/assets/styles/input.css -o ./src/assets/styles/output.css --watch",
+    "prod": "tailwindcss -i ./src/assets/styles/input.css -o ./src/assets/styles/output.css --minify"
   },
   "repository": {
     "type": "git",
