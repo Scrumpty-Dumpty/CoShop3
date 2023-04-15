@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Lists</title>
-    <link rel="icon" href="/src/assets/logo.svg" type="image/svg+xml" />
-    <link href="/src/assets/styles/output.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/src/assets/styles/popupWindows.css" />
-    <script src="/src/components/menu.js" type="text/javascript" defer></script>
+    <link rel="icon" href="../assets/logo.svg" type="image/svg+xml" />
+    <link href="../assets/styles/output.css" rel="stylesheet" />
+    <link href="../assets/styles/popupWindows.css" rel="stylesheet" />
     <script
-      src="/src/components/topnav.js"
+      src="../assets/scripts/manageItems.js"
       type="text/javascript"
       defer
     ></script>
+    <script src="../components/menu.js" type="text/javascript" defer></script>
+    <script src="../components/topnav.js" type="text/javascript" defer></script>
   </head>
   <body class="m-0 bg-cream">
     <topnav-component></topnav-component>
@@ -73,43 +74,7 @@
           </div>
 
           <!-- List Items -->
-          <ul class="mt-5" id="myUL">
-            <!-- li Container -->
-            <li>
-              <div
-                id="item"
-                class="flex items-center justify-between border-b border-gray-400 p-2"
-              >
-                <!-- li Content -->
-                <div class="flex items-center gap-4">
-                  <input type="checkbox" />
-                  <input
-                    type="text"
-                    class="max-w-min bg-transparent text-xl outline-none"
-                    value="Hot Dog Buns"
-                  />
-                  <button
-                    onclick="document.getElementById('editWindow').classList.toggle('hidden');"
-                  >
-                    <i class="fa-solid fa-pen-to-square"></i>
-                  </button>
-                  <button>
-                    <i class="fa-solid fa-trash-can text-red-700"></i>
-                  </button>
-                </div>
-                <div class="flex items-center gap-4">
-                  <select id="store" class="bg-transparent p-2 text-gray-600">
-                    <option selected>Walmart (3.1 miles away)</option>
-                    <option value="">Target (5.7 miles away)</option>
-                    <option value="">Whole Foods (5.8 miles away)</option>
-                    <option value="">Meijier (7.0 miles away)</option>
-                    <option value="">Costco (12 miles away)</option>
-                  </select>
-                  <img src="/src/assets/img/man-2.png" alt="" class="h-10" />
-                </div>
-              </div>
-            </li>
-          </ul>
+          <ul class="mt-5" id="myUL"></ul>
         </div>
       </main>
       <div
@@ -153,7 +118,7 @@
         </div>
       </div>
     </div>
-    <script src="/src/assets/scripts/previewImage.js"></script>
-    <script src="/src/assets/scripts/popupWindows.js"></script>
+    <script src="../assets/scripts/previewImage.js"></script>
+    <script src="../assets/scripts/popupWindows.js"></script>
   </body>
 </html>

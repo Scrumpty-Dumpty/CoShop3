@@ -4,16 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Lists</title>
-    <link rel="icon" href="/src/assets/logo.svg" type="image/svg+xml" />
-    <link href="/src/assets/styles/output.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/src/assets/styles/popupWindows.css" />
-    <script src="/src/components/menu.js" type="text/javascript" defer></script>
-    <script
-      src="/src/components/topnav.js"
-      type="text/javascript"
-      defer
-    ></script>
+    <title>Groups</title>
+    <link rel="icon" href="../assets/logo.svg" type="image/svg+xml" />
+    <link href="../assets/styles/output.css" rel="stylesheet" />
+    <link href="../assets/styles/popupWindows.css" rel="stylesheet" />
+    <script src="../components/menu.js" type="text/javascript" defer></script>
+    <script src="../components/topnav.js" type="text/javascript" defer></script>
   </head>
   <body class="m-0 bg-cream">
     <topnav-component></topnav-component>
@@ -73,53 +69,12 @@
                 </button>
               </div>
               <div class="flex items-center gap-4">
-                <img src="/src/assets/img/man-2.png" alt="" class="h-10" />
+                <img src="../assets/images/man-2.png" alt="" class="h-10" />
               </div>
             </div>
           </li>
         </ul>
       </main>
-      <div
-        id="editWindow"
-        class="absolute inset-0 m-auto hidden h-96 w-4/12 rounded-xl bg-orange-300"
-      >
-        <div class="relative h-40 w-full rounded-t-xl bg-orange-400/50">
-          <img
-            id="pic-preview"
-            src="https://via.placeholder.com/130x160"
-            class="absolute -bottom-20 left-8 h-[160px] w-[130px] rounded-lg object-cover"
-          />
-        </div>
-        <button
-          class="absolute top-0 right-0 p-4"
-          onclick="document.getElementById('editWindow').classList.toggle('hidden')"
-        >
-          <i class="fa-solid fa-x"></i>
-        </button>
-        <div class="mt-16 p-5">
-          <div class="flex items-center gap-4">
-            <h1 class="text-2xl font-bold">Weekend BBQ</h1>
-            <button><i class="fa-solid fa-trash-can text-red-700"></i></button>
-          </div>
-          <p>Group Members: 1</p>
-          <p>Created by: <span class="font-bold">Rick</span></p>
-          <form>
-            <label for="file-input">
-              Add a picture
-              <i class="fa-solid fa-camera"></i>
-            </label>
-
-            <input
-              id="file-input"
-              type="file"
-              accept="image/*"
-              onchange="readURL(this);"
-              class="hidden"
-            />
-          </form>
-        </div>
-      </div>
-    </div>
-    <script src="/src/assets/scripts/popupWindows.js"></script>
+    <script src="../assets/scripts/popupWindows.js"></script>
   </body>
 </html>

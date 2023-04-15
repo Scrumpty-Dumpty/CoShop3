@@ -32,9 +32,9 @@ function createNewElement() {
   var option4 = document.createElement("option");
   var option5 = document.createElement("option");
   var i3 = document.createElement("img");
-  
+
   // Send alert if nothing is typed in, send alert when item is sucessfully added
-  if (inputValue === '') {
+  if (inputValue === "") {
     alert("Please insert name of item.");
   } else {
     document.getElementById("myUL").appendChild(li);
@@ -61,27 +61,32 @@ function createNewElement() {
   div3.appendChild(i3);
 
   // Set attributes of each element according to the class of the default list
-  div1.setAttribute('id','item');
-  div1.setAttribute('class','flex items-center justify-between border-b border-gray-400 p-2');
-  div2.setAttribute('class','flex items-center gap-4');
-  input1.setAttribute('type','checkbox');
-  input2.setAttribute('type','text');
-  input2.setAttribute('class','max-w-min bg-transparent text-xl outline-none');
-  input2.setAttribute('value',inputValue);
-  button1.setAttribute('onclick', document.getElementById('editWindow').classList.toggle('hidden'));
-  i1.setAttribute('class','fa-solid fa-pen-to-square');
-  i2.setAttribute('class','fa-solid fa-trash-can text-red-700');
-  div3.setAttribute('class','flex items-center gap-4');
-  i3.setAttribute('src','./assets/img/man-2.png')
-  i3.setAttribute('class','h-10');
-  i3.setAttribute('alt',' ');
-  select.setAttribute('id','store');
-  option1.setAttribute('selected');
-  option2.setAttribute('value','');
-  option3.setAttribute('value','');
-  option4.setAttribute('value','');
-  option5.setAttribute('value','');
-
+  div1.setAttribute("id", "item");
+  div1.setAttribute(
+    "class",
+    "flex items-center justify-between border-b border-gray-400 p-2"
+  );
+  div2.setAttribute("class", "flex items-center gap-4");
+  input1.setAttribute("type", "checkbox");
+  input2.setAttribute("type", "text");
+  input2.setAttribute("class", "max-w-min bg-transparent text-xl outline-none");
+  input2.setAttribute("value", inputValue);
+  button1.setAttribute(
+    "onclick",
+    document.getElementById("editWindow").classList.toggle("hidden")
+  );
+  i1.setAttribute("class", "fa-solid fa-pen-to-square");
+  i2.setAttribute("class", "fa-solid fa-trash-can text-red-700");
+  div3.setAttribute("class", "flex items-center gap-4");
+  i3.setAttribute("src", "src/assets/images/man-2.png");
+  i3.setAttribute("class", "h-10");
+  i3.setAttribute("alt", " ");
+  select.setAttribute("id", "store");
+  option1.setAttribute("selected");
+  option2.setAttribute("value", "");
+  option3.setAttribute("value", "");
+  option4.setAttribute("value", "");
+  option5.setAttribute("value", "");
 }
 
 // Creates a new list
@@ -90,7 +95,7 @@ function createNewList() {
   var li = document.createElement("li");
   var div1 = document.createElement("div");
   var listLink = document.createElement("a");
-  if (inputValue === '') {
+  if (inputValue === "") {
     alert("Please insert the name of the list.");
   } else {
     document.getElementById("myListUL").appendChild(li);
@@ -102,12 +107,9 @@ function createNewList() {
   li.appendChild(div1);
   div1.appendChild(listLink);
 
-
-  
-  div1.setAttribute('class','bg-cream text-right px-4 py-2 mt-1');
-  listLink.setAttribute('href',' ');
-  listLink.setAttribute('class','font-medium text-xl')
-
+  div1.setAttribute("class", "bg-cream text-right px-4 py-2 mt-1");
+  listLink.setAttribute("href", " ");
+  listLink.setAttribute("class", "font-medium text-xl");
 }
 
 function createNewGroup() {
@@ -123,9 +125,9 @@ function createNewGroup() {
   var i2 = document.createElement("i");
   var div3 = document.createElement("div");
   var i3 = document.createElement("img");
-  
+
   // Send alert if nothing is typed in, send alert when item is sucessfully added
-  if (inputValue === '') {
+  if (inputValue === "") {
     alert("Please insert name of item.");
   } else {
     document.getElementById("myUL").appendChild(li);
@@ -145,21 +147,25 @@ function createNewGroup() {
   div3.appendChild(i3);
 
   // Set attributes of each element according to the class of the default list
-  div1.setAttribute('id','item');
-  div1.setAttribute('class','flex items-center justify-between border-b border-gray-400 p-2');
-  div2.setAttribute('class','flex items-center gap-4')
-  input2.setAttribute('type','text');
-  input2.setAttribute('class','max-w-min bg-transparent text-xl outline-none');
-  input2.setAttribute('value',inputValue);
-  button1.setAttribute('onclick', document.getElementById('editWindow').classList.toggle('hidden'));
-  i1.setAttribute('class','fa-solid fa-pen-to-square');
-  i2.setAttribute('class','fa-solid fa-trash-can text-red-700');
-  div3.setAttribute('class','flex items-center gap-4');
-  i3.setAttribute('src','./assets/img/man-2.png')
-  i3.setAttribute('class','h-10');
-  i3.setAttribute('alt',' ');
+  div1.setAttribute("id", "item");
+  div1.setAttribute(
+    "class",
+    "flex items-center justify-between border-b border-gray-400 p-2"
+  );
+  div2.setAttribute("class", "flex items-center gap-4");
+  input2.setAttribute("type", "text");
+  input2.setAttribute("class", "max-w-min bg-transparent text-xl outline-none");
+  input2.setAttribute("value", inputValue);
+  button1.setAttribute(
+    "onclick",
+    document.getElementById("editWindow").classList.toggle("hidden")
+  );
+  i1.setAttribute("class", "fa-solid fa-pen-to-square");
+  i2.setAttribute("class", "fa-solid fa-trash-can text-red-700");
+  div3.setAttribute("class", "flex items-center gap-4");
+  i3.setAttribute("src", "/src/assets/images/man-2.png");
+  i3.setAttribute("class", "h-10");
+  i3.setAttribute("alt", " ");
 }
 
-function editWindow() {
-
-}
+function editWindow() {}
