@@ -1,54 +1,35 @@
-// NOTE: THIS CODE HAS NOT BEEN TESTED YET
+// const express = require('express');
+// const bodyParser = require('body-parser');
+// const { connectToDB } = require('./dbConnection');
 
-const express = require('express');
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
-const path = require('path');
-
-const app = express();
+// const app = express();
+// app.use(bodyParser.json());
 
 
+// // Route to handle user creation
+// app.post('/register', async (req, res) => {
+//   try {
+//     // Connect to MongoDB
+//     const client = await connectToDB();
 
-<script src="connections_constants.js"></script>
+//     // Get user information from request body
+//     const { name, email, password } = req.body;
 
-// Set up middleware to parse incoming request bodies as JSON
-app.use(bodyParser.json());
+//     // Insert user document into "users" collection
+//     const result = await client.db('CoShopDB').collection('users').insertOne({ name, email, password });
 
-// Set up a route to serve the user registration form
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, './register.html'));
-});
+//     // Close MongoDB connection
+//     await client.close();
 
-// Set up a route to handle form submissions
-app.post('/register', async (req, res) => {
-  try {
-    // Check if the two password fields match
-    if (req.body.password !== req.body.confirmPassword) {
-      res.status(400).send('Passwords do not match!');
-      return;
-    }
+//     // Send success response
+//     res.status(200).json({ message: "User created successfully", data: result.ops[0] });
+//   } catch (err) {
+//     console.error(err);
+//     res.status(500).json({ error: "Failed to create user" });
+//   }
+// });
 
-    // Create a new user based on the form data
-    const user = new User({
-      name: req.body.name,
-      email: req.body.email,
-      password: req.body.password,
-      //profileImage: req.file.filename
-    });
-
-    // Save the user to the database
-    await user.save();
-
-    // Send a success response
-    res.send('User registered successfully!');
-  } catch (err) {
-    // Handle errors
-    console.error(err);
-    res.status(500).send('Error registering user!');
-  }
-});
-
-// Start the server
-app.listen(8080, () => {
-  console.log('Server started on port 8080');
-});
+// // Start the server
+// app.listen(3000, () => {
+//   console.log("Server is running on port 3000");
+// });
