@@ -19,7 +19,7 @@
   "scripts": {
     "dev": "concurrently \"tailwindcss -i ./src/assets/styles/input.css -o ./src/assets/styles/output.css --watch\" \"nodemon server.js\"",
     "prod": "tailwindcss -i ./src/assets/styles/input.css -o ./src/assets/styles/output.css --minify",
-    "start": "node server.js"
+    "start": "node src/server.js"
   },
   "repository": {
     "type": "git",
