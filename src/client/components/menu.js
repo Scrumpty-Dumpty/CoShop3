@@ -9,7 +9,9 @@ class Menu extends HTMLElement {
       <div id="menu" class="min-h-screen w-60 transition-all duration-200">
         <div class="flex items-center justify-center p-4">
           <span class="flex-1 text-xl font-semibold">CoShop</span>
-          <button id="menuBtn" type="button" aria-controls="menu" aria-label="Open navigation" aria-expanded="true"><i class="fa-solid fa-bars-staggered fa-lg"></i></button>
+          <button id="menuBtn" type="button" aria-controls="menu" aria-label="Open navigation" aria-expanded="true">
+            <i class="fa-solid fa-bars-staggered fa-lg"></i>
+          </button>
         </div>
         <nav class="p-4 flex flex-col gap-5">
           <a href="../index.html" class="flex items-center hover:bg-cream rounded-md">
