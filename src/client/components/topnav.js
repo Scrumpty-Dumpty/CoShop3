@@ -13,7 +13,7 @@ class Topnav extends HTMLElement {
             <div id="statusBubble" class="absolute -top-3 -right-[0.10rem] border border-cream bg-red-500 h-[0.75rem] w-[0.75rem] rounded-full"></div>
           </i>
         </button>
-        <div class="h-10 w-10 relative bg-cover bg-center" style="background-image: url('/src/assets/images/man-1.png')">
+        <div class="h-10 w-10 relative bg-cover bg-center" style="background-image: url('../assets/images/man-1.png')">
           <div id="statusBubble" class="absolute bottom-0 right-0 border border-cream bg-green-500 h-3 w-3 rounded-full"></div>
         </div>
       </div>
