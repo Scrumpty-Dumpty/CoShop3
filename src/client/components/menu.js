@@ -12,7 +12,7 @@ class Menu extends HTMLElement {
           <button id="menuBtn" type="button" aria-controls="menu" aria-label="Open navigation" aria-expanded="true"><i class="fa-solid fa-bars-staggered fa-lg"></i></button>
         </div>
         <nav class="p-4 flex flex-col gap-5">
-          <a href="/index.html" class="flex items-center hover:bg-cream rounded-md">
+          <a href="../index.html" class="flex items-center hover:bg-cream rounded-md">
             <i class="fa-solid fa-house fa-lg p-5"></i>
             <span class="ml-2 font-medium">Dashboard</span>
           </a>
@@ -20,15 +20,15 @@ class Menu extends HTMLElement {
             <i class="fa-solid fa-message fa-lg p-5"></i>
             <span class="ml-2 font-medium">Messages</span>
           </a>
-          <a href="/src/pages/lists.html" class="flex items-center hover:bg-cream rounded-md">
+          <a href="../pages/lists.html" class="flex items-center hover:bg-cream rounded-md">
             <i class="fa-solid fa-list fa-lg p-5"></i>
             <span class="ml-2 font-medium">Lists</span>
           </a>
-          <a href="/src/pages/groups.html" class="flex items-center hover:bg-cream rounded-md">
+          <a href="../pages/groups.html" class="flex items-center hover:bg-cream rounded-md">
             <i class="fa-solid fa-user-group fa-lg p-5"></i>
             <span class="ml-2 font-medium">Groups</span>
           </a>
-          <a href="/src/pages/settings.html" class="flex items-center hover:bg-cream rounded-md">
+          <a href="../pages/settings.html" class="flex items-center hover:bg-cream rounded-md">
             <i class="fa-solid fa-gear fa-lg p-5"></i>
             <span class="ml- font-medium">Settings</span>
           </a>
