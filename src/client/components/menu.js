@@ -32,7 +32,7 @@ class Menu extends HTMLElement {
           </a>
           <a href="../pages/settings.html" class="flex items-center hover:bg-cream rounded-md">
             <i class="fa-solid fa-gear fa-lg p-5"></i>
-            <span class="ml- font-medium">Settings</span>
+            <span class="ml-2 font-medium">Settings</span>
           </a>
         </nav>
       </div>
