@@ -20,7 +20,10 @@ app.use(express.static(__dirname + "/client"));
 // to start the server, use command "node server.js"
 // to stop server, use Ctrl + C
 app.listen(3000, () => {
-  console.log("Server is running on http://localhost:3000");
+  console.log(
+    `Server is running at \"http://localhost:3000\"\n` +
+      `press Ctrl-C to terminate.`
+  );
 });
 
 // place this code before starting the server:
